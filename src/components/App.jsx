@@ -1,4 +1,8 @@
-export const App = () => {
+import { getAllFilms } from "ServiceApi/AllApiFetch";
+
+const App = () => {
+  getAllFilms()
+
   return (
     <div
       style={{
@@ -11,6 +15,10 @@ export const App = () => {
       }}
     >
       React homework template
+      
     </div>
   );
 };
+
+
+export default App
