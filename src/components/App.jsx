@@ -1,21 +1,14 @@
-import { getAllFilms } from "ServiceApi/AllApiFetch";
+import { getAllTrendingFilms, getAllSearchFilms } from "ServiceApi/AllApiFetch";
+import Header from "./Heder/Heder";
+import HomePage from "pages/Homepage";
 
 const App = () => {
-  getAllFilms()
 
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
       
+      <Header/>
+      <HomePage/>
     </div>
   );
 };
