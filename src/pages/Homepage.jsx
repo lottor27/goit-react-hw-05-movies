@@ -1,27 +1,9 @@
-import { getTrendingFilm } from "ServiceApi/AllApiFetch"
-import { useEffect, useState } from "react"
-
+// import { getTrendingFilm } from "ServiceApi/AllApiFetch"
+// import { useEffect, useState } from "react"
+import React from "react"
 
 const HomePage = () => {
     
-    const [data, setData] = useState([])
-
-    useEffect(() => {
-    const fetchinfo= async () => {
-        try {
-            const data = await getTrendingFilm();
-            const movieInfo = data.response;
-            console.log(data.results);
-            setData(movieInfo)
-        } catch (error) {
-            console.error(error.message);
-        } 
-    }
-    fetchinfo({movieInfo})
-}, [])
-
-
-       console.log({movieInfo});
 	return (
 		<div id="carouselExampleFade" className="carousel slide carousel-fade">
   <div className="carousel-inner">

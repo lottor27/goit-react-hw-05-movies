@@ -29,37 +29,37 @@ const options = {
 // }
 
 
-export const getAllTrendingFilms = async () => {
-	const { data } = await axios(`3/trending/movie/week?language=en-US`, options)
-	return data
-}
+// export const getAllTrendingFilms = async () => {
+// 	const { data } = await axios(`3/trending/movie/week?language=en-US`, options)
+// 	return data
+// }
 
-export const getTrendingFilm = async () => {
-	const { data } = await axios(`3/trending/movie/day?language=en-US`, options)
-	return data
-}
-
-
-export const getAllSearchFilms = async () => {
-	const { data } = await axios(`3/search/movie?query=Harry&include_adult=false&language=en-US&page=1`, options)
-	return data
-}
-
-export const getAllFilmsDetails = async () => {
-	const { data } = await axios('3/movie/767?language=en-US', options)
-	return data
-}
-
-export const getAllFilmsCredits = async () => {
-	const { data } = await axios('767/credits?language=en-US', options)
-	return data
-}
+// export const getTrendingFilm = async () => {
+// 	const { data } = await axios(`3/trending/movie/day?language=en-US`, options)
+// 	return data
+// }
 
 
-export const getAllFilmsReviews = async () => {
-	const { data } = await axios('3/movie/767/reviews?language=en-US&page=1', options)
-	return data
-}
+// export const getAllSearchFilms = async () => {
+// 	const { data } = await axios(`3/search/movie?query=Harry&include_adult=false&language=en-US&page=1`, options)
+// 	return data
+// }
+
+// export const getAllFilmsDetails = async () => {
+// 	const { data } = await axios('3/movie/767?language=en-US', options)
+// 	return data
+// }
+
+// export const getAllFilmsCredits = async () => {
+// 	const { data } = await axios('767/credits?language=en-US', options)
+// 	return data
+// }
+
+
+// export const getAllFilmsReviews = async () => {
+// 	const { data } = await axios('3/movie/767/reviews?language=en-US&page=1', options)
+// 	return data
+// }
 
 
 

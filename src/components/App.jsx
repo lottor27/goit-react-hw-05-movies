@@ -1,17 +1,30 @@
 import { getAllTrendingFilms, getAllSearchFilms } from "ServiceApi/AllApiFetch";
-import Header from "./Heder/Heder";
+import { lazy, Suspense } from 'react';
 import HomePage from "pages/Homepage";
+import { Route, Routes } from "react-router-dom";
+import Layout from "Layout/Layout";
 
-const App = () => {
+import Cast from "components/Cast";
+import Reviews from "pages/Reviews";
+import DetailsMovies from "pages/DetailsMovies";
+import ErrorPage from "pages/ErrorPage";
+import Movies from "pages/Movies";
 
+
+export const App = () => {
   return (
-    <div>
-      
-      <Header/>
-      <HomePage/>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage/>} />
+          <Route path='/movies' element={<Movies />} />
+          <Route path='/movies/:movieId' element={<DetailsMovies />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+        </Route>
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </Suspense>
   );
 };
-
-
-export default App
