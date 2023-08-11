@@ -1,31 +1,37 @@
-// import { getTrendingFilm } from "ServiceApi/AllApiFetch"
-// import { useEffect, useState } from "react"
+import { getTrendingFilm } from "ServiceApi/AllApiFetch"
+import { useEffect, useState } from "react"
 import React from "react"
+import Loader from "components/Loader/Loader"
+import Hero from "components/Hero/Hero"
 
 const HomePage = () => {
-    
+  const [arrayResults, setArrayResults] = useState(null);
+  const [isLoader, setIsLoader] = useState(false);
+  
+  useEffect(() => {
+    const fetchTrendingMovies = async () => {
+        setIsLoader(true);
+        try {
+            const data = await getTrendingFilm();
+            setArrayResults(data.results);
+        }
+        catch (error) {
+            console.message(error);
+        } finally {
+            setIsLoader(false);
+        }
+    }
+    fetchTrendingMovies()
+}, [])
+
+
+    console.log("Hello in home");
 	return (
-		<div id="carouselExampleFade" className="carousel slide carousel-fade">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img src= "https://image.tmdb.org/t/p/original/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg" className="d-block w-100" alt="..."/>
+    <div>
+    {isLoader && <Loader />}
+    {arrayResults && <Hero arrayResults={arrayResults} />}
     </div>
-    <div className="carousel-item">
-      <img src="..." className="d-block w-100" alt="..."/>
-    </div>
-    <div className="carousel-item">
-      <img src="..." className="d-block w-100" alt="..."/>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
+  
 	)
 }
 

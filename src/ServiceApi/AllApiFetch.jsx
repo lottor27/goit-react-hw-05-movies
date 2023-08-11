@@ -29,15 +29,15 @@ const options = {
 // }
 
 
-// export const getAllTrendingFilms = async () => {
-// 	const { data } = await axios(`3/trending/movie/week?language=en-US`, options)
-// 	return data
-// }
+export const getAllTrendingFilms = async () => {
+	const { data } = await axios(`3/trending/movie/week?language=en-US`, options)
+	return data
+}
 
-// export const getTrendingFilm = async () => {
-// 	const { data } = await axios(`3/trending/movie/day?language=en-US`, options)
-// 	return data
-// }
+export const getTrendingFilm = async () => {
+	const { data } = await axios(`3/trending/movie/day?language=en-US`, options)
+	return data
+}
 
 
 // export const getAllSearchFilms = async () => {
