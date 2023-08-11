@@ -27,9 +27,9 @@ const InTernd = () => {
   
 console.log(arrayResults);
     return (
-        <div>
+        <div className="container">
         {isLoader && <Loader />}
-<div className="card-group">
+        {arrayResults && <div className="card-group">
 {arrayResults.map(arrayResult => {
     const posterIMG = `https://image.tmdb.org/t/p/original/${arrayResult.backdrop_path}`
     return(
@@ -44,7 +44,7 @@ console.log(arrayResults);
   </div>
     )
 })}
-  </div>
+  </div>}
   </div>
     )
 }
