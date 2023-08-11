@@ -38,7 +38,7 @@ console.log(arrayResults);
     <div className="card-body" key={arrayResult.id}>
       <h5 className="card-title">{arrayResult.title}</h5>
       <p className="card-text">{arrayResult.overview}</p>
-      <p className="card-text"><small className="text-body-secondary">10/{arrayResult.vote_average}</small>
+      <p className="card-text"><small className="text-body-secondary">10/{arrayResult.vote_average.toFixed(2)}</small>
       </p>
     </div>
   </div>
