@@ -40,26 +40,29 @@ export const getTrendingFilm = async () => {
 }
 
 
-// export const getAllSearchFilms = async () => {
-// 	const { data } = await axios(`3/search/movie?query=Harry&include_adult=false&language=en-US&page=1`, options)
-// 	return data
-// }
+export const getAllSearchFilms = async (query) => {
+	const { data } = await axios(`3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`, options)
+	return data
+}
 
-// export const getAllFilmsDetails = async () => {
-// 	const { data } = await axios('3/movie/767?language=en-US', options)
-// 	return data
-// }
+export const getAllFilmsDetails = async (movieId) => {
+	const { data } = await axios(`3/movie/${movieId}?language=en-US`, options)
+	return data
+}
 
-// export const getAllFilmsCredits = async () => {
-// 	const { data } = await axios('767/credits?language=en-US', options)
-// 	return data
-// }
+export const getAllFilmsCredits = async (movieId) => {
+	const { data } = await axios(`3/movie/${movieId}/credits?language=en-US`, options)
+	return data
+}
 
 
-// export const getAllFilmsReviews = async () => {
-// 	const { data } = await axios('3/movie/767/reviews?language=en-US&page=1', options)
-// 	return data
-// }
+export const getAllFilmsReviews = async (movieId) => {
+	const { data } = await axios(`3/movie/${movieId}/reviews?language=en-US&page=1`, options)
+	return data
+}
 
+export const getPosterMovie = (pathToPoster) => {
+  return `https://image.tmdb.org/t/p/original${pathToPoster}`
+}
 
 
