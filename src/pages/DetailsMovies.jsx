@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Loader from 'components/Loader/Loader';
 import { getAllFilmsDetails } from "ServiceApi/AllApiFetch"
 import Button from "components/ButtonBack/ButtonBack";

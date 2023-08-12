@@ -40,6 +40,3 @@ const SearchResultsList = ({ arrayResults }) => {
 
 export default SearchResultsList
 
-{/* <li key={movie.id}>
-<Link to={`/movies/${randomId}`} state={{ from: location }}>{movie.title}</Link>
-</li> */}

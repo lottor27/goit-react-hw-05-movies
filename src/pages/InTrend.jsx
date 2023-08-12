@@ -36,7 +36,7 @@ console.log(arrayResults);
         {arrayResults && <div className="card-group">
 {arrayResults.map(arrayResult => {
     const posterIMG = `https://image.tmdb.org/t/p/original/${arrayResult.backdrop_path}`
-    const movieId = arrayResult.id
+    
     return(
 <div className="card" key={arrayResult.id}>
 

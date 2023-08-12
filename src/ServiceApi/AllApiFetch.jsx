@@ -10,8 +10,7 @@
 
 import axios from 'axios'
 
-const API_KEY = 'bd0a4499e3f0b036025d12595397227a';
-const URL_FOR_IMG = 'https://image.tmdb.org/t/p/w500';
+
 axios.defaults.baseURL = 'https://api.themoviedb.org/'
 
 const options = {
@@ -22,11 +21,6 @@ const options = {
         'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MWY1ZmQ4ZGMwZDZkNWUzNmE0MTk2NTgzYzVjMTQ5ZSIsInN1YiI6IjY0ZDI5ODNlODUwOTBmMDE0NDVkMTZhMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.cCL_vkXeZRKopM-L3r01YH3xygP-PT4RBaXjsS3_dWE',
     },
 };
-
-// export const getAllFilms = async () => {
-// 	const { data } = await axios(`3/trending/movie/day?language=en-US`, options)
-// 	return data
-// }
 
 
 export const getAllTrendingFilms = async () => {
