@@ -1,5 +1,5 @@
 import React from 'react';
-import { getPosterMovie } from "ServiceApi/AllApiFetch"
+
 import DefaultFilm from 'DefaultFilm.jpg'
 import Reviews from 'components/Reviews/Reviews';
 import Cast from 'components/Cast/Cast';
