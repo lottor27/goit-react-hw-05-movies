@@ -10,14 +10,15 @@ const MovieDetailsCard = ({ movie }) => {
     const getUserScope = movie => Math.floor((movie.vote_average / 10) * 100);
     const getYear = movie => movie.release_date.split('-')[0];
     const getGenres = movie => movie.genres.map(genre => <span key={genre.id}>{genre.name}</span>);
-
-    const posterPath = movie.poster_path ? getPosterMovie(movie.poster_path) : DefaultFilm;
+    
+    const posterIMG = `https://image.tmdb.org/t/p/original/${movie.posterPath}`
+    const posterPath = movie.poster_path ? posterIMG : DefaultFilm;
 
     return (
         <div >
             <div>
                 <img
-                    src={getPosterMovie(posterPath)}
+                    src={posterPath}
                     alt={movie.original_title}
                     width={250}
                 />
