@@ -1,10 +1,9 @@
 import React from "react";
 import { Link, useLocation } from 'react-router-dom';
-import {useState } from 'react';
-import Loader from 'components/Loader/Loader';
+
 
 const Hero = ({ arrayResults }) => {
-     const [isLoader, setIsLoader] = useState(false);
+     
     console.log(arrayResults);
   const location = useLocation();
   
@@ -19,7 +18,7 @@ const Hero = ({ arrayResults }) => {
       
   return (
     <div>
-      {isLoader && <Loader />}
+      
       {arrayResults && (
         <div className="card mb-3">
           <img
