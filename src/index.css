@@ -33,3 +33,11 @@ code {
   display: flex;
   flex-direction: row;
 }
+
+.feeter{
+background-color: rgb(219, 236, 231);
+}
+
+.feeters-item{
+  background-color: rgb(238, 243, 242);
+}

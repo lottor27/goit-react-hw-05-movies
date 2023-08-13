@@ -2,16 +2,17 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div className="card text-center">
-  <div className="card-header">
-    Featured
-  </div>
-  <div className="card-body">
-    <h5 className="card-title">Special title treatment</h5>
-    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  </div>
-</div>
-    )
+      <div className="card text-center">
+        <div className="card-header feeter">Footer</div>
+        <div className="card-body feeters-item">
+          <h5 className="card-title">There is super footer</h5>
+          <p className="card-text">
+            There is nothing in the world so irresistibly contagious as laughter
+            and good humour
+          </p>
+        </div>
+      </div>
+    );
 }
 
 export default Footer
