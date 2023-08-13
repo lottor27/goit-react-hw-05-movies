@@ -5,7 +5,8 @@ import Loader from "components/Loader/Loader"
 import Hero from "components/Hero/Hero"
 
 const HomePage = () => {
-  const [arrayResults, setArrayResults] = useState(null);
+    const [arrayResults, setArrayResults] = useState(null);
+    
   const [isLoader, setIsLoader] = useState(false);
   
   useEffect(() => {
