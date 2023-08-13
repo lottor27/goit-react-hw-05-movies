@@ -26,7 +26,7 @@ const HomePage = () => {
 }, [])
 
 
-    console.log("Hello in home");
+   
 	return (
     <div>
     {isLoader && <Loader />}
