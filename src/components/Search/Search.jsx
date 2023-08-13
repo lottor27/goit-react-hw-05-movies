@@ -23,21 +23,24 @@ const SearchMovies = ({ onSearchSubmit }) => {
     }
 
     return (
-        <div>
-            <form className="d-flex" role="search" onSubmit={handleSubmit}>
-                <input
-                    className="form-control me-2"
-                    type="search"
-                    autoComplete="off"
-                    autoFocus
-                    aria-label="Search"
-                    placeholder="Search"
-                    onChange={handleChange}
-                    value={searchQuery} />
-                <button className="btn btn-outline-success" type='submit'>Search</button>
-            </form>
-        </div>
-    )
+      <div>
+        <form className="d-flex" onSubmit={handleSubmit}>
+          <input
+            className="form-control me-2"
+            type="text"
+            autoComplete="off"
+            autoFocus
+            aria-label="Search"
+            placeholder="Search"
+            onChange={handleChange}
+            value={searchQuery}
+          />
+          <button className="btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    );
 }
 
 export default SearchMovies;

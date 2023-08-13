@@ -1,6 +1,6 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, } from 'react';
 import Loader from "components/Loader/Loader";
 import SearchMovies from "components/Search/Search";
 import SearchResultsList from "components/SearchResults/SearchResults";
@@ -11,6 +11,7 @@ const Movies = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState(null);
     const [searchParams] = useSearchParams();
+ 
 
     useEffect(() => {
         const fetchSearchMovies = async () => {

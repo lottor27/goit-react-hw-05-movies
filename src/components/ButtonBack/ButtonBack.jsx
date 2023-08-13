@@ -6,11 +6,16 @@ const Button = ({ children, handleClick }) => {
     const fromLocation = location.state?.from;
 
     return (
-        <div >
-            <Link to={fromLocation || '/'} onClick={handleClick} >
-           {children}
-            </Link></div>
-    )
+      <div>
+        <Link
+          to={fromLocation || '/inTrend' || '/movies'}
+          onClick={handleClick}
+          className="btn btn-outline-secondary"
+        >
+          {children}
+        </Link>
+      </div>
+    );
 }
 
 export default Button;

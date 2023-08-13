@@ -5,6 +5,7 @@ import Loader from 'components/Loader/Loader';
 import { getAllFilmsDetails } from "ServiceApi/AllApiFetch"
 import Button from "components/ButtonBack/ButtonBack";
 import MovieDetailsCard from "components/MovieDetailsCard/MovieDetailsCard";
+import { Link, Outlet } from "react-router-dom";
 
 const DetailsMovies = () => {
     const { movieId } = useParams();
@@ -31,15 +32,26 @@ const DetailsMovies = () => {
 
 
     return (
-        <div> {isLoader && <Loader />}
+      <div>
+        {' '}
+        {isLoader && <Loader />}
         <Button
-                handleClick={() => { navigate(location) }}>
-                Go back
-            </Button>
-            {selectedMovie && <MovieDetailsCard movie={selectedMovie} />}
-
+          handleClick={() => {navigate(location);}} >
+          Go back
+        </Button>
+        {selectedMovie && <MovieDetailsCard movie={selectedMovie} />}
+        <div className="d-grid gap-2">
+          <p className="text-body-secondary">Additional information</p>
+          <Link to="cast" className="btn btn-outline-secondary">
+            Cast
+          </Link>
+          <Link to="reviews" className="btn btn-outline-secondary">
+            Reviews
+          </Link>
+          <Outlet />
         </div>
-    )
+      </div>
+    );
 }
 
 export default DetailsMovies
