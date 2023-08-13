@@ -6,7 +6,7 @@ const HomePage = lazy(() => import('pages/Homepage'));
 const Cast = lazy(() => import('./Cast/Cast'));
 const Reviews = lazy(() => import('components/Reviews/Reviews'));
 const DetailsMovies = lazy(() => import('pages/DetailsMovies'));
-const ErrorPage = lazy(() => import('pages/ErrorPage'));
+
 const Movies = lazy(() => import('pages/Movies'));
 const InTernd = lazy(() => import('pages/InTrend'));
 
@@ -28,7 +28,7 @@ export const App = () => {
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
-        <Route path="*" element={<ErrorPage />} />
+        
       </Routes>
      </Suspense>
   );
