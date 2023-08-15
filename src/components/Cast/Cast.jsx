@@ -29,7 +29,7 @@ const Cast = () => {
         fetchMovieCast()
     }, [Error, movieId]);
 
-    console.log(castResults);
+    
     return (
         <>
             {isLoader && <Loader />}
