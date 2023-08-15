@@ -16,18 +16,20 @@ export const App = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage/>}/>
-          <Route path='inTrend' element={<InTernd />} />
-          <Route path='inTrend:movieId' element={<InTernd />} >
+          <Route index element={<HomePage />} />
+          <Route path="inTrend" element={<InTernd />} />
+          <Route path="inTrend:movieId" element={<DetailsMovies />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
           </Route>
-          <Route path='movies' element={<Movies />} />
-          <Route path='movies/:movieId' element={<DetailsMovies />}>
+          <Route path="movies" element={<Movies />} />
+          <Route path="movies/:movieId" element={<DetailsMovies />}>
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-     </Suspense>
+    </Suspense>
   );
 };

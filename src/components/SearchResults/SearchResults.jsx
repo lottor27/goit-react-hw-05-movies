@@ -5,7 +5,9 @@ import DefaultFilm from 'DefaultFilm.jpg'
 
 const SearchResultsList = ({ arrayResults }) => {
     const location = useLocation();
-
+  
+ 
+ 
     return (
         <ul>
             {arrayResults.map(arrayResult => {
